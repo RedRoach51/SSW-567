@@ -3,7 +3,6 @@ import pytest;
 class NonexistantTriangle(Exception):
     pass;
 
-
 def classify_triangle(a,b,c):
     string = "";
     Equil_check = False;
@@ -44,3 +43,5 @@ def test_inputs():
         assert classify_triangle(-1,-1,-1);
     with pytest.raises(NonexistantTriangle):
         assert classify_triangle(0,0,0);
+
+print(classify_triangle(int(input()),int(input()),int(input())));
